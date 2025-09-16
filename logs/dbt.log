@@ -165,3 +165,31 @@ Happy modeling!
 [0m17:27:49.640699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75db5a5c4470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75db3f579610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75db3f579670>]}
 [0m17:27:49.643005 [debug] [MainThread]: Flushing usage events
 [0m17:27:50.185050 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:00:28.396281 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:00:28.423170 | de62f408-10dd-447b-b6c6-4f8e0ce5e771 ==============================
+[0m19:00:28.423170 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:00:28.425239 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'static_parser': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'no_print': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'quiet': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_path': 'logs', 'fail_fast': 'False', 'target_path': 'None', 'introspect': 'True', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'write_json': 'True', 'profiles_dir': '/home/ebun/.dbt', 'empty': 'None'}
+[0m19:00:28.427918 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /mnt/c/Users/Bluechip/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:00:28.435549 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": false, "command_wall_clock_time": 0.15901138, "process_in_blocks": "48", "process_kernel_time": 1.552914, "process_mem_max_rss": "97688", "process_out_blocks": "0", "process_user_time": 3.053589}
+[0m19:00:28.437764 [debug] [MainThread]: Command `dbt clean` failed at 19:00:28.437575 after 0.16 seconds
+[0m19:00:28.439264 [debug] [MainThread]: Flushing usage events
+[0m19:00:47.105144 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:00:47.125448 | 3aaaa1d5-f7f3-4eed-b601-5c295d6ff0f0 ==============================
+[0m19:00:47.125448 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:00:47.127707 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'indirect_selection': 'eager', 'write_json': 'True', 'log_path': 'logs', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'printer_width': '80', 'partial_parse': 'True', 'fail_fast': 'False', 'static_parser': 'True', 'profiles_dir': '/home/ebun/.dbt', 'log_format': 'default', 'quiet': 'False', 'warn_error': 'None', 'use_colors': 'True', 'version_check': 'True', 'introspect': 'True', 'empty': 'False'}
+[0m19:00:47.130270 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /mnt/c/Users/Bluechip/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:00:47.137724 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.13498828, "process_in_blocks": "0", "process_kernel_time": 1.460812, "process_mem_max_rss": "97624", "process_out_blocks": "0", "process_user_time": 2.804195}
+[0m19:00:47.140251 [debug] [MainThread]: Command `dbt compile` failed at 19:00:47.139974 after 0.14 seconds
+[0m19:00:47.142268 [debug] [MainThread]: Flushing usage events

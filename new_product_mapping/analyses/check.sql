@@ -1,1 +1,1 @@
-SELECT * FROM {{ ref('newfile') }}
+select  {{multiply(100,50)}}

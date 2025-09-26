@@ -1,0 +1,23 @@
+name: dbt Workflow
+
+on: workflow_dispatch
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12.3'
+
+      - name: Install dbt
+        run: pip install dbt
+
+      - name: Run dbt
+        uses: mwhitaker/dbt-action@master
+        with:
+          dbt_command: "dbt run --profiles-dir ."

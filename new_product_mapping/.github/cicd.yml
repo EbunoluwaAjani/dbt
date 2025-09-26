@@ -1,8 +1,5 @@
 name: dbt Workflow
-on:
- push:
-   branches:
-     - main
+on: workflow_dispatch
 jobs:
  dbt-run:
    runs-on: ubuntu-latest
@@ -19,4 +16,3 @@ jobs:
        uses: mwhitaker/dbt-action@master
        with:
          dbt_command: "dbt run --profiles-dir ."
-       
